@@ -77,12 +77,13 @@ export default function Countdown (){
 
     return (
         <div className="flex flex-col items-center justify-center h-screen bg-purple-300">
-          {/* Timer box container */}
-          <div className="bg-purple-400 shadow-lg rounded-[25px] p-8 w-full max-w-md">
-            {/* Title of the countdown timer */}
-            <h1 className="text-4xl font-bold mb-4 text-purple-800 hover:text-purple-900 text-center">
+           <h1 className="text-8xl font-bold mb-20 text-purple-800 hover:text-purple-900 text-center">
               Countdown Timer
             </h1>
+          {/* Timer box container */}
+          <div className="bg-purple-400 shadow-lg rounded-[25px] p-8 w-full max-w-screen-md">
+            {/* Title of the countdown timer */}
+           
             {/* Input and set button container */}
             <div className="flex items-center border-purple-500 border-2 mb-6">
               <Input
@@ -102,7 +103,7 @@ export default function Countdown (){
               </Button>
             </div>
             {/* Display the formatted time left */}
-            <div className="text-6xl font-bold text-gray-200 mb-8 text-center">
+            <div className="text-9xl font-bold text-gray-200 m-10 text-center">
               {formatTime(timeLeft)}
             </div>
             {/* Buttons to start, pause, and reset the timer */}
@@ -110,21 +111,21 @@ export default function Countdown (){
           <Button
             onClick={handleStart}
             variant="outline"
-            className="text-purple-800 rounded-[7px] hover:border-2"
+            className="text-purple-800 rounded-[7px] hover:border-2 px-10"
           >
             {isPaused ? "Resume" : "Start"}
           </Button>
           <Button
             onClick={handlePause}
             variant="outline"
-            className="text-purple-800 rounded-[7px] hover:border-2"
+            className="text-purple-800 rounded-[7px] hover:border-2 px-10"
           >
             Pause
           </Button>
           <Button
             onClick={handleReset}
             variant="outline"
-            className="text-purple-800 rounded-[7px] hover:border-2"
+            className="text-purple-800 rounded-[7px] hover:border-2 px-10"
           >
             Reset
           </Button>
